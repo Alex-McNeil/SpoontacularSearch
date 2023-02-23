@@ -5,7 +5,6 @@ import RecipeInformationCard from './components/RecipeInformationCard';
 
 export default function RecipePage() {
 	const spoonacularApiKey ="36ca42633a0e4c23a7c5823ea0382c8d";
-	// const spoonacularApiKey = "abfb34cb46034efbacefae8521f59e96";
 	const [recipeData, setRecipeData] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const params = useParams();

@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 
 function HomePage() {
 	const spoonacularApiKey ="36ca42633a0e4c23a7c5823ea0382c8d";
-	// const spoonacularApiKey = "abfb34cb46034efbacefae8521f59e96";
 	const [searchValue, setSearchValue] = useState('');
 	const [recipeData, setRecipeData] = useState(null);
 	const [paginationOffset, setPaginationOffset] = useState(0);
