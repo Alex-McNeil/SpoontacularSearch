@@ -1,0 +1,21 @@
+.recipeDetailsCard {
+	margin-top: 3em;
+	border: 2px solid black;
+}
+
+.recipeDetailsImage {
+	height: 15em;
+	width: 25em;
+}
+
+.recipeDetailsGrid {
+	margin-top: 1em;
+}
+
+.recipeInformation {
+	margin-top: 2em;
+}
+
+.dietaryRestrictions {
+	margin-top: 2em;
+}

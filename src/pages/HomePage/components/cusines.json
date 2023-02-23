@@ -1,0 +1,31 @@
+{
+	"results":
+	[
+		{"type": "African"},
+		{"type": "American"},
+		{"type": "British"},
+		{"type": "Cajun"},
+		{"type": "Caribbean"},
+		{"type": "Chinese"},
+		{"type": "Eastern European"},
+		{"type": "European"},
+		{"type": "French"},
+		{"type": "German"},
+		{"type": "Greek"},
+		{"type": "Indian"},
+		{"type": "Irish"},
+		{"type": "Italian"},
+		{"type": "Japanese"},
+		{"type": "Jewish"},
+		{"type": "Korean"},
+		{"type": "Latin American"},
+		{"type": "Mediterranean"},
+		{"type": "Mexican"},
+		{"type": "Middle Eastern"},
+		{"type": "Nordic"},
+		{"type": "Southern"},
+		{"type": "Spanish"},
+		{"type": "Thai"},
+		{"type": "Vietnamese"}
+	]
+}
