@@ -1,11 +1,11 @@
 import './HomePage.css';
 import RecipeGrid from './components/RecipeGrid';
 import Header from '../../Layout/Header';
-import {useCallback, useState} from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import {useCallback, useState} from 'react';
 
 function HomePage() {
 	const spoonacularApiKey ="36ca42633a0e4c23a7c5823ea0382c8d";
@@ -58,14 +58,15 @@ function HomePage() {
 				<Grid container justifyContent="space-between">
 					<Grid item xs={8} align="right">
 						<TextField
-							placeholder="Search for a recipe..."
+							placeholder="Search for a Recipe..."
 							id="searchRecipe"
 							onChange={handleChange}
 							value={searchValue}
 							variant="outlined"
-							label="Search For a Recipe"
+							label="Search for a Recipe (ex: Pasta)"
 							color="primary"
 							className="searchInput"
+							autoComplete="off"
 					/>
 					</Grid>
 					<Grid item xs={4} align="left" className="searchGrid">

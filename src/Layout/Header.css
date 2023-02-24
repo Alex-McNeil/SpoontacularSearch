@@ -1,8 +1,7 @@
 .headerTitle {
-	margin-top: 0.7rem;
-	padding-top: 5vh;
+	padding-top: 0.7em;
 	padding-bottom: 1em;
-	color: white;
+	color: black;
 }
 
 .headerButton {
@@ -11,6 +10,6 @@
 }
 
 .headerButtonGrid {
-	padding-top: 3em;
+	padding-top: 2.5em;
 	padding-left: 1em;
 }

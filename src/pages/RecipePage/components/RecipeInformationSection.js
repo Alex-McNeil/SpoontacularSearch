@@ -4,19 +4,19 @@ function RecipeInformationSection({recipeData}) {
 	return (
 		<>
 			<Typography variant="h6" color="text.primary">
-				<u>Recipe Information:</u>
+				<u>Recipe Information</u>
 			</Typography>
 			<Typography variant="body2" color="text.secondary">
-				Preparation time: {recipeData.readyInMinutes} minutes
+				Preparation time: <strong>{recipeData.readyInMinutes} minutes</strong>
 			</Typography>
 			<Typography variant="body2" color="text.secondary">
-				Health Score: {recipeData.healthScore}
+				Health Score: <strong>{recipeData.healthScore}</strong>
 			</Typography>
 			<Typography variant="body2" color="text.secondary">
-				Servings: {recipeData.servings}
+				Servings: <strong>{recipeData.servings}</strong>
 			</Typography>
 			<Typography variant="body2" color="text.secondary">
-				Weight Watcher's Smart Points: {recipeData.weightWatcherSmartPoints}
+				Weight Watcher's Smart Points: <strong>{recipeData.weightWatcherSmartPoints}</strong>
 			</Typography>
 		</>
 	);

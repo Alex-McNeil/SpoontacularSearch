@@ -1,17 +1,22 @@
 import './RecipeCard.css';
-import Button from '@mui/material/Card';
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import PropTypes from "prop-types";
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export default function RecipeCard({recipeData}) {
+	const navigate = useNavigate();
+
+	const goToRecipeDetails = (() => {
+		navigate(`/recipe/${recipeData.id}`);
+	});
+
 	return (
-		<Card sx={{ maxWidth: 320 }} className="card">
+		<Card sx={{ maxWidth: 260, backgroundColor: "#befcd9" }} className="card" key={`${recipeData.id}-card`}>
 			<CardHeader
 				title={recipeData.title}
 				key={`${recipeData.id}-cardHeader`}
@@ -25,34 +30,38 @@ export default function RecipeCard({recipeData}) {
 				alt={recipeData.title}
 				key={`${recipeData.id}-cardMedia`}
 			/>
-			<CardContent>
-				<Typography variant="body2" color="text.secondary">
-					Preparation time: {recipeData.readyInMinutes}
+			<CardContent className="cardContent">
+				<Typography variant="body2" color="text.secondary" key={`${recipeData.id}-readyInMinutes`}>
+					Preparation Time: <strong>{recipeData.readyInMinutes} minutes</strong>
 				</Typography>
-				<Typography variant="body2" color="text.secondary">
-					Health Score: {recipeData.healthScore}
+				<Typography variant="body2" color="text.secondary" key={`${recipeData.id}-healthScore`}>
+					Health Score: <strong>{recipeData.healthScore}</strong>
 				</Typography>
-				<Typography variant="body2" color="text.secondary">
-					Servings: {recipeData.servings}
+				<Typography variant="body2" color="text.secondary" key={`${recipeData.id}-servings`}>
+					Servings: <strong>{recipeData.servings}</strong>
 				</Typography>
-				<Typography variant="body2" color="text.secondary">
-					Weight Watcher's Smart Points: {recipeData.weightWatcherSmartPoints}
+				<Typography variant="body2" color="text.secondary" key={`${recipeData.id}-weightWatcherSmartPoints`}>
+					Weight Watcher's Smart Points: <strong>{recipeData.weightWatcherSmartPoints}</strong>
 				</Typography>
-				<Typography variant="body2" color="text.secondary">
-					Vegan? {recipeData.vegan ? "Yes" : "No"}
+				<Typography variant="body2" color="text.secondary" key={`${recipeData.id}-vegan`}>
+					Vegan: <strong>{recipeData.vegan ? <span className="yesText">Yes</span> : <span className="noText">No</span>}</strong>
 				</Typography>
-				<Typography variant="body2" color="text.secondary">
-					Dairy Free? {recipeData.dairyFree ? "Yes" : "No"}
+				<Typography variant="body2" color="text.secondary" key={`${recipeData.id}-dairyFree`}>
+					Dairy Free: <strong>{recipeData.dairyFree ? <span className="yesText">Yes</span> : <span className="noText">No</span>}</strong>
 				</Typography>
-				<Typography variant="body2" color="text.secondary">
-					Gluten Free? {recipeData.glutenFree ? "Yes" : "No"}
+				<Typography variant="body2" color="text.secondary" key={`${recipeData.id}-glutenFree`}>
+					Gluten Free: <strong>{recipeData.glutenFree ? <span className="yesText">Yes</span> : <span className="noText">No</span>}</strong>
 				</Typography>
 			</CardContent>
-			<CardActions disableSpacing key={`${recipeData.id}-cardActions`} style={{marginTop: "1em"}}>
-				<Link to={`/recipe/${recipeData.id}`}>
-					<Button variant="contained" key={`${recipeData.id}-button`} className="recipeDetails">Recipe Details</Button>
-				</Link>
-			</CardActions>
+			<Button
+				variant="contained"
+				key={`${recipeData.id}-button`}
+				className="recipeDetails"
+				sx={{marginBottom: "1em", textTransform: "none", border: "1px solid black"}}
+				onClick={goToRecipeDetails}
+			>
+				Recipe Details
+			</Button>
 		</Card>
 	);
 }

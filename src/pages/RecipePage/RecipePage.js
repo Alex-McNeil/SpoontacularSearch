@@ -1,7 +1,7 @@
 import Header from '../../Layout/Header';
+import RecipeInformationCard from './components/RecipeInformationCard';
 import {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import RecipeInformationCard from './components/RecipeInformationCard';
 
 export default function RecipePage() {
 	const spoonacularApiKey ="36ca42633a0e4c23a7c5823ea0382c8d";

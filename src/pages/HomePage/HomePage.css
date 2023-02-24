@@ -11,19 +11,12 @@
 	width: 60%;
 }
 
-@media (max-width: 599px) { .searchInput {
-	display: block;
-}}
-
 .searchButton {
 	height: 3em;
 	width: 9em;
 }
 
-@media (max-width: 599px) { .searchButton {
-	margin-top: 2em;
-}}
-
 .searchGrid {
-	padding-left: 1em;
+	padding-left: 0.8em;
+	padding-top: 0.3em;
 }

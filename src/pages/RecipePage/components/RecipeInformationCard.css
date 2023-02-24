@@ -3,9 +3,13 @@
 	border: 2px solid black;
 }
 
+.recipeDetailsTitle {
+	padding-top: 1rem;
+}
+
 .recipeDetailsImage {
 	height: 15em;
-	width: 25em;
+	width: 22em;
 }
 
 .recipeDetailsGrid {
@@ -13,9 +17,10 @@
 }
 
 .recipeInformation {
-	margin-top: 2em;
+	padding-top: 2em;
 }
 
 .dietaryRestrictions {
-	margin-top: 2em;
+	padding-top: 2em;
+	padding-bottom: 1em;
 }

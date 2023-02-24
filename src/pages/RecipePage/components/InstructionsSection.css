@@ -1,6 +1,7 @@
 .instructionsSection {
 	margin-top: 2em;
-	margin-left: 3em;
+	margin-left: 2em;
+	margin-right: 0.5em;
 	border: 1px solid black;
 	margin-bottom: 2em;
 }
@@ -8,4 +9,12 @@
 .instructionsContent {
 	padding-top: 1em;
 	padding-left: 1em;
+}
+
+@media (max-width: 599px) { .instructionsSection {
+	margin-left: 0;
+}}
+
+.instructionsStep {
+	margin-left: -20px;
 }

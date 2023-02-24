@@ -1,6 +1,5 @@
 .ingredientsSection {
 	margin-top: 2em;
-	margin-left: 3em;
 	border: 1px solid black;
 	margin-bottom: 2em;
 }
@@ -8,4 +7,8 @@
 .ingredientsContent {
 	padding-top: 1em;
 	padding-left: 1em;
+}
+
+.ingredientsItem {
+	text-transform: capitalize;
 }

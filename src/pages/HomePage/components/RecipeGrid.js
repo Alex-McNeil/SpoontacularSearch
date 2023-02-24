@@ -25,12 +25,12 @@ export default function RecipeGrid({onCuisineSelect, onNext, onPrevious, recipeD
 			<Grid className="recipeGrid" container justifyContent={"space-between"}>
 				<Grid item align="center" xs={12}>
 					<Typography variant="body">
-						Displaying results <strong>{`${recipeData.offset} - ${recipeData.offset + recipeData.number}`}</strong> out of <strong>{`${recipeData.totalResults}`}</strong> results.
+						Displaying results <strong>{`${recipeData.offset + 1} - ${recipeData.offset + recipeData.number}`}</strong> out of <strong>{`${recipeData.totalResults}`}</strong> results.
 					</Typography>
-				
+				</Grid>
+				<Grid item align="center" xs={12} className="paginationSection">
 					<Button
 						variant="contained"
-						className="paginationButton"
 						disabled={recipeData.offset === 0}
 						onClick={onPrevious}
 						style={{marginLeft: "1em"}}
@@ -39,7 +39,6 @@ export default function RecipeGrid({onCuisineSelect, onNext, onPrevious, recipeD
 					</Button>
 					<Button
 						variant="contained"
-						className="paginationButton"
 						disabled={recipeData.offset >= recipeData.totalResults - recipeData.number}
 						onClick={onNext}
 						style={{marginLeft: "1em"}}
@@ -68,10 +67,10 @@ export default function RecipeGrid({onCuisineSelect, onNext, onPrevious, recipeD
 					}
 				</Select>
 			</div>
-			<Grid container className="recipeContent" justifyContent="space-between">
+			<Grid container className="recipeContent" justifyContent="center">
 				{
 					results.map((recipe) => (
-						<Grid item className="recipeCards" align="center">
+						<Grid item className="recipeCards" align="center" key={`${recipe.id}-grid`}>
 							<RecipeCard recipeData={recipe} key={recipe.id} />
 						</Grid>
 					))

@@ -1,22 +1,23 @@
+import "./DietaryRestrictionsSection.css";
 import Typography from '@mui/material/Typography';
 
 function DietaryRestrictionsSection({recipeData}) {
 	return (
 		<>
-			<Typography variant="h6" color="text.secondary">
-				<u>Dietary Restrictions:</u>
+			<Typography variant="h6" color="text.primary">
+				<u>Dietary Restrictions</u>
 			</Typography>
 			<Typography variant="body2" color="text.secondary">
-				Vegan? {recipeData.vegan ? "Yes" : "No"}
+				Vegan: <strong>{recipeData.vegan ? <span className="yesText">Yes</span> : <span className="noText">No</span>}</strong>
 			</Typography>
 			<Typography variant="body2" color="text.secondary">
-				Dairy Free? {recipeData.dairyFree ? "Yes" : "No"}
+				Dairy Free: <strong>{recipeData.dairyFree ? <span className="yesText">Yes</span> : <span className="noText">No</span>}</strong>
 			</Typography>
 			<Typography variant="body2" color="text.secondary">
-				Gluten Free? {recipeData.glutenFree ? "Yes" : "No"}
+				Gluten Free: <strong>{recipeData.glutenFree ? <span className="yesText">Yes</span> : <span className="noText">No</span>}</strong>
 			</Typography>
 			<Typography variant="body2" color="text.secondary">
-				Low FODMAP? {recipeData.lowFodmap ? "Yes" : "No"}
+				Low FODMAP: <strong>{recipeData.lowFodmap ? <span className="yesText">Yes</span> : <span className="noText">No</span>}</strong>
 			</Typography>
 		</>
 	);
